@@ -61,6 +61,4 @@ async def on_ready():
     await bot.change_presence(activity=discord.Game(name='p!help || Use p!create to start an account!'), status=discord.Status.idle)
 
 
-bot.run('NTYwNjk1NDEzNDA2MTcxMTU2.XKaEBQ.nWZ39jiM52EhMSPPWf_KAiKrXYA')
-# regenerated token, don't even try to use it
-
+bot.run('')
