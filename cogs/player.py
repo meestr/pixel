@@ -50,6 +50,10 @@ class Player(commands.Cog):
                 embed=await macro.send(f"Here's your daily ``{200}`` Cubes! Come back in 24 hours for more."))
         except commands.errors.CommandOnCooldown:
             await ctx.send("You're doing that too much. Come back in 24 hours.")
+    @commands.command(name='invite')
+    async def inv(self, ctx):
+        await ctx.send(embed=await macro.send("Check your DMs!"))
+        await ctx.message.author.send(embed=await macro.send(f"Hi!\nThanks for taking an interest in me. \n The support server is here: https://discord.gg/zdUSNVM\n and the link to invite me is here: https://discordapp.com/api/oauth2/authorize?client_id=560695413406171156&permissions=0&scope=bot"))
 
 
 def setup(bot: commands.Bot):
