@@ -197,8 +197,9 @@ class Games(commands.Cog):
         bet = int(bet)
         assert bet > 8, "You can't have a target amount 8 or below."
         assert bet <= 10000
-
         assert current + bet != 0, "Your target amount is too high."
+        if bet > current:
+            bet = current
         if random.randint(1, bet // 2) == 1:
             await self.client.update(bal=current + bet * 3, _id=ctx.message.author.id)
             await ctx.send(embed=await macro.send(
